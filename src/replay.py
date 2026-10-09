@@ -9,3 +9,8 @@ def load_run(run_id: str) -> dict:
 def replay(run_id: str) -> list:
     run = load_run(run_id)
     return [mubit.Client().calls.rerun(call) for call in run["calls"]]
+
+
+def replay(run_id: str) -> list:
+    run = load_run(run_id)
+    return [mubit.Client().calls.rerun(call) for call in run["calls"]]
